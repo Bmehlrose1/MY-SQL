@@ -1,0 +1,22 @@
+/** Price is in $
+    We are an expensive shoe store. We love to overprice shoes.
+    Rating is out of 10
+    And... uh... Whoever buys all of these will be charged an extra $50,000
+**/
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, product TEXT, price NUMERIC, rating NUMERIC);
+
+INSERT INTO store VALUES (1, "a sport athlete's old and used shoes", 10000, 2.5);
+INSERT INTO store VALUES (2, "The brand new Yeezy's", 5000, 10);
+INSERT INTO store VALUES (3, "some shoe (not a pair of shoes, just one shoe) we found on the street", 8000, 0);
+INSERT INTO store VALUES (4, "some shoes my dog peed in", 15000, 1);
+INSERT INTO store VALUES (5, "my neighbors' shoes", 12000, 7);
+
+SELECT * FROM store;
+
+
+SELECT SUM(price) FROM store;
+
+SELECT * FROM store WHERE price < 10000 ORDER BY price; /** The table after the calculation of the total prices **/
+
+SELECT * FROM store WHERE price >= 10000 ORDER BY price; /** This is the table at the bottom. **/
