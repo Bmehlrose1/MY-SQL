@@ -38,3 +38,13 @@ FROM STATION
 SELECT DISTINCT CITY 
 FROM STATION
 WHERE ID %2=0
+
+/*Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer*/
+Select Distinct City
+From Station
+Where MOD ( ID, 2)=0 
+Order by City ASC;
+
+/*Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.*/
+Select Count(City) - Count (Distinct City) From Station;
+
